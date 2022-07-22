@@ -1,0 +1,22 @@
+{
+  "name": "sass-learning-proyect",
+  "version": "1.0.0",
+  "description": "Sass learning proyect",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass sass/main.scss css/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hydorn/Sass-learning-proyect.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hydorn/Sass-learning-proyect/issues"
+  },
+  "homepage": "https://github.com/Hydorn/Sass-learning-proyect#readme",
+  "devDependencies": {
+    "sass": "^1.53.0"
+  }
+}
