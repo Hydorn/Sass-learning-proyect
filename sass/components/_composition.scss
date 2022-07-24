@@ -1,0 +1,48 @@
+.composition {
+    position: relative;
+
+    &__photo {
+        width: 60%;
+        box-shadow: 0 1.5rem 4rem rgba(0,0,0,0.5);
+        border-radius: 3px;
+        position: absolute;
+        transition: all 0.3s;
+        z-index: 10;
+
+        &--p1 {
+            top: 0rem;
+            left: 0;
+        }
+
+        &--p2 {
+            top: 4rem;
+            right: 0;
+        }
+
+        &--p3 {
+            top: 12rem;
+            left: 10rem;
+        }
+
+        &:hover {
+            box-shadow: 0 2.5rem 4rem rgba(0,0,0,0.6);
+            transform: scale(1.05);
+            //The one being hovered goes on top
+            z-index: 20;
+
+            //The green outline
+            outline: 1.5rem solid $color-medium-green;
+            outline-offset: 1rem;
+        }
+
+    }
+
+    /**To make the elements not hovered shrink as i hover one
+    It's needed to apply pseudo-class hover on the container
+    and inside the hover, select the not:hover pseudo class of the
+    images to select properly **/
+
+    &:hover &__photo:not(:hover){
+        transform: scale(0.95);
+    }
+}
