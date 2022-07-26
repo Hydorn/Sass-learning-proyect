@@ -1,0 +1,99 @@
+.form{
+    &__group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white,0.8);
+        border: none;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all .5;
+
+        &:focus {
+            outline: none;
+            box-shadow: $shadow;
+            border-bottom: 3px solid $color-dark-green;
+
+            &:invalid {
+                border-bottom: 3px solid $color-sec-2;
+            }
+        }
+
+        &::-webkit-input-placeholder {
+            color: #aaa;
+        }
+    }
+
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    // Silbling selector, must be and adyacent silbling with this selector. Does not work if the silbling selected comes after in the html
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__radio-group{
+        width: 49%;
+        display: inline-block;
+        
+    }
+
+    &__radio-label {
+        font-size: 1.6rem;
+        cursor: pointer;
+        position: relative;
+        padding: 0 2.5rem;
+    }
+
+    &__radio-button {
+        display: inline-block;
+
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        top: 0.2rem;
+        left: 0;
+        
+        border-radius: 100px;
+        outline: solid 4px $color-medium-green;
+        outline-offset: 4px;
+        
+        &::after {
+            content: "";
+            display: block;
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            
+            background-color: $color-medium-green;
+            border-radius: 100px;
+            opacity: 0;
+        }
+    }
+
+    /*The span is not a direct silbling of radio-input, so, in order to modify it, first select the father, that is the direct silbling of the radio-input, and then
+    i select the radio-button::after */
+    &__radio-input {
+        opacity: 0;
+    }
+
+    &__radio-input:checked + &__radio-label &__radio-button::after {
+        opacity: 1;
+    }
+}

@@ -32,5 +32,30 @@
 .section-stories {
     position: relative;
     padding: 5rem 0 ;
-    overflow: hidden;
+}
+
+.section-booking {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom, $color-light-green, $color-dark-green);
+}
+
+.book {
+/*    width: 75%;
+    margin: 0 auto;
+    padding: 15rem */
+
+    background-image: linear-gradient(100deg, 
+                      rgba($color-white,0.9) 0%,
+                      rgba($color-white,0.9) 50%,
+                      transparent 50%),
+                      url(../img/nat-10.jpg);
+    background-size: cover;
+    
+    border-radius: 3px;
+    box-shadow: $shadow;
+
+    &__form{
+        width: 50%;
+        padding:5rem;
+    }
 }
