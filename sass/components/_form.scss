@@ -58,7 +58,7 @@
         font-size: 1.6rem;
         cursor: pointer;
         position: relative;
-        padding: 0 2.5rem;
+        padding: 0 3.5rem;
     }
 
     &__radio-button {
@@ -90,7 +90,7 @@
     /*The span is not a direct silbling of radio-input, so, in order to modify it, first select the father, that is the direct silbling of the radio-input, and then
     i select the radio-button::after */
     &__radio-input {
-        opacity: 0;
+        display: none;
     }
 
     &__radio-input:checked + &__radio-label &__radio-button::after {

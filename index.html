@@ -12,6 +12,25 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button"><span class="navigation__icon"></span></label>
+
+        <div class="navigation__background">
+            &nbsp;
+        </div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link"> <span>01</span> About Nat</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"> <span>02</span> Your benefits</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"> <span>03</span> Popular tours</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"> <span>04</span> Stories</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link"> <span>05</span> Book now</a></li>
+            </ul>
+        </nav>
+    </div>
+    
     <header class="header">        
         <div class="header__logo-container">
             <img src="img/logo-white.png" alt="logo" class="header__logo">
@@ -24,6 +43,7 @@
             <a href="#" class="btn btn--animated btn--white">Discover our tours</a>
         </div>
     </header>
+
     <main class="main">
         <section class="section-about">
             <div class="u-center-text u-margin-bottom-6">
@@ -286,8 +306,8 @@
                                         <span class="form__radio-button"></span>
                                         Large tour group
                                     </label>
-                                </div>
-                                    <a href="#" class="btn btn--green">Next step &rarr;</a>
+                                </div class="form__group">
+                                    <button class="btn btn--green">Next step &rarr;</button>
                                 </div>
 
                         </form>
@@ -295,9 +315,33 @@
                 </div>
             </div>
         </section>
-        
-
     </main>
-    
+    <footer class="footer">
+        <div class="footer__logo-box">
+            <img src="img/logo-green-2x.png" alt="Natours logo" class="footer__logo">
+        </div>
+        <div class="row">
+            <div class="col-1-of-2">
+                <div class="footer__navigation">
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Contac Us</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Privacy</a></li>
+                        <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1-of-2">
+               <p class="footer__copyright">
+                    Built by 
+                   <a href="#" class="footer__link">JONAS SCHMEDTMANN</a> for his online course 
+                   <a href="#" class="footer__link">ADVANCED CSS AND SASS</a>. Copyright © by Jonas Schmedtmann. 
+                   You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. 
+                   A credit to the original author, Jonas Schmedtmann, is of course highly appreciated!
+               </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
